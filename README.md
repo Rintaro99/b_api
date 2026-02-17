@@ -1,10 +1,10 @@
 # README
 
 ## 概要
-曖昧検索に対応したテキスト検索アプリです。
-フロントエンドとバックエンドを分離したAPI構成で開発しました。
-Reactで構築したフロントエンドからRails APIへリクエストを送り、
-部分一致検索を実現しています。
+曖昧検索に対応したテキスト検索アプリです。  
+フロントエンドとバックエンドを分離したAPI構成で開発しました。  
+Reactで構築したフロントエンドからRails APIへリクエストを送り、  
+部分一致検索を実現しています。  
 本番環境はAWS上に構築し、アプリケーションとデータベースを分離した構成にしています。
 
 ## 制作背景
@@ -18,18 +18,18 @@ Reactで構築したフロントエンドからRails APIへリクエストを送
 
 ## 技術スタック
 * フロントエンド
-・React
-・JavaScript
-・CSS
+・React  
+・JavaScript  
+・CSS  
 * バックエンド
-・Ruby on Rails（APIモード）
+・Ruby on Rails（APIモード）  
 ・PostgreSQL
 * インフラ
-・Amazon EC2
-・Amazon RDS
-・Amazon S3
-・Docker（開発環境）
-・Amazon CloudFront（任意）
+・Amazon EC2  
+・Amazon RDS  
+・Amazon S3  
+・Docker（開発環境）  
+・Amazon CloudFront（任意）  
 
 ## 主な機能
 * テキスト検索（部分一致）
@@ -38,7 +38,7 @@ Reactで構築したフロントエンドからRails APIへリクエストを送
 * レスポンシブ対応
 
 ## こだわったポイント
-* API分離構成
+* API分離構成  
 RailsをAPIモードで構築し、フロントとバックを完全に分離しました。
 CORS設定を行い、安全に通信できるように設計しました。
 * AWS本番環境
