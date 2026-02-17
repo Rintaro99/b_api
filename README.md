@@ -1,24 +1,51 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+曖昧検索に対応したテキスト検索アプリです。
+フロントエンドとバックエンドを分離したAPI構成で開発しました。
+Reactで構築したフロントエンドからRails APIへリクエストを送り、
+部分一致検索を実現しています。
+本番環境はAWS上に構築し、アプリケーションとデータベースを分離した構成にしています。
 
-Things you may want to cover:
+## 制作背景
+プログラミングスクールで開発した技術スタックのおさらいを含め、学習用として開発しています。
 
-* Ruby version
+## システム構成
+* フロントエンド：S3にホスティング
+* バックエンド：EC2上でRails APIを稼働
+* データベース：RDS（PostgreSQL）
+* CDN：CloudFront（※使用していれば記載）
 
-* System dependencies
+## 技術スタック
+* フロントエンド
+・React
+・JavaScript
+・CSS
+* バックエンド
+・Ruby on Rails（APIモード）
+・PostgreSQL
+* インフラ
+・Amazon EC2
+・Amazon RDS
+・Amazon S3
+・Docker（開発環境）
+・Amazon CloudFront（任意）
 
-* Configuration
+## 主な機能
+* テキスト検索（部分一致）
+* 曖昧検索対応
+* コピーボタン機能
+* レスポンシブ対応
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## こだわったポイント
+* API分離構成
+RailsをAPIモードで構築し、フロントとバックを完全に分離しました。
+CORS設定を行い、安全に通信できるように設計しました。
+* AWS本番環境
+アプリケーションサーバーとデータベースを分離するため、
+・Rails → EC2
+・DB → RDS
+という構成にしました。
+RDSはSSL接続を必須とし、セキュリティグループでEC2からのみアクセス可能に設定しています。
+* Dockerによる開発環境統一
+開発環境はDockerで構築し、本番との差異を最小限に抑えています。
