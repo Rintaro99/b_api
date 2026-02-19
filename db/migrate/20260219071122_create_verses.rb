@@ -9,7 +9,7 @@ class CreateVerses < ActiveRecord::Migration[7.2]
       t.timestamps
     end
 
-    add_index :verses, [:book_id, :chapter]
+    add_index :verses, [ :book_id, :chapter ]
     add_index :verses, :text
   end
 end

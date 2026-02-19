@@ -9,7 +9,7 @@ class CreateBooks < ActiveRecord::Migration[7.2]
 
       t.timestamps
     end
-    
+
     add_index :books, :slug, unique: true
     add_index :books, :position
   end
