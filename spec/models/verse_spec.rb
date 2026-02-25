@@ -64,7 +64,7 @@ RSpec.describe Verse, type: :model do
         describe "verse" do
             describe "presence" do
                 context "when nil" do
-                    before { verse.verse = nil}
+                    before { verse.verse = nil }
                     it "is invalid" do
                         expect(verse).not_to be_valid
                     end
@@ -188,9 +188,8 @@ RSpec.describe Verse, type: :model do
                 )
             end
             it "returns verses filtered by book and chapter ordered by verse" do
-                
                 result = Verse.by_book_and_chapter(book.id, 1)
-                expect(result.map(&:verse)).to eq([1, 2])
+                expect(result.map(&:verse)).to eq([ 1, 2 ])
             end
         end
     end
