@@ -1,0 +1,8 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Unmaintained Dependency",
+      "check_name": "EOLRuby"
+    }
+  ]
+}
