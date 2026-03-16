@@ -1,5 +1,5 @@
 class Api::V1::BooksController < ApplicationController
-    before_action :set_book, only: [:show]
+    before_action :set_book, only: [ :show ]
 
     def index
         books = Book.all
@@ -13,6 +13,6 @@ class Api::V1::BooksController < ApplicationController
     private
 
     def set_book
-        @book = Book.find_by!(:slug params[:slug])
+        @book = Book.find_by!(slug: params[:slug])
     end
 end
